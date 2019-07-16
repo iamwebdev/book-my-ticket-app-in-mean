@@ -27,5 +27,5 @@
 - Go to mongodb database and set flag is_admin to true to get all rights of admin(To add movies,Setup Shows)
 - Create another user and book tickets.
 
-### For any kind of help please commment me in comment section.
+### For any kind of help please comment me in comment section.
 
