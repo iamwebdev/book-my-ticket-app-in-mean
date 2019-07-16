@@ -1,0 +1,20 @@
+.backimage {
+    background-image: url('../../assets/images/cinema2.jpg');
+    background-repeat: repeat-x top;    
+    height: 600px;
+    /* height: 100%; */
+    /* width: 100%; may not be necessary */
+}
+.my-form {
+    background-color: rgba(169, 36, 67, 0.51);
+    margin-top: 30px;
+    padding: 55px;
+}
+label {
+    color: white;
+}
+.form-header{
+    color: white;
+    text-align: center;
+    font-family: cursive;
+}

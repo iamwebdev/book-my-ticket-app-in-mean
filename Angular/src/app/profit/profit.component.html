@@ -1,0 +1,27 @@
+<div class="col-md-12 backimage">
+    <div class="row justify-content-md-center">
+      <div class="col-md-8 mt-5">
+        <div class="col-md-8 mb-3">
+          <div class="row">
+            <div class="col-md-6">
+              <input (change)="getPayments($event)" type="date" name="date" id="date" class="form-control">
+            </div>
+          </div>
+        </div>
+        <table class="table table-striped table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Theatre Name</th>
+                <th scope="col">Recieved Amount</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let theatre of theatres | keyvalue">
+                  <td>{{ theatre.key }}</td>
+                  <td>{{ theatre.value }}</td>
+                </tr>
+            </tbody>
+          </table>
+      </div>
+    </div>
+</div>      

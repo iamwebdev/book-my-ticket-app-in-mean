@@ -1,0 +1,27 @@
+<div class="col-md-12 backimage">
+  <div class="col-md-12">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-4 mt-5">
+          <form method="POST" [formGroup]="editMovieForm" (ngSubmit)="updateMovie(editMovieForm.value)" class="my-form">
+          <h3 class="form-header">Edit Movie </h3>
+            <div class="form-group">
+              <label for="name">Movie Name</label>
+              <input type="name" name="name" formControlName="name"  class="form-control" id="name" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+                <label for="date">Releasing Date</label>
+                <input type="text" name="date" formControlName="date" class="form-control" id="date" placeholder="Enter date">
+            </div>
+            <div class="form-group">
+              <label for="actor">Actor</label>
+              <input type="text" name="actor" formControlName="actor" class="form-control" id="actor" placeholder="Enter actor">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-info" type="submit">Update</button>
+            </div>
+          </form>
+      </div>
+    </div>
+  </div>  
+</div>  
+

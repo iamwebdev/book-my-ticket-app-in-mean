@@ -1,0 +1,28 @@
+<div class="container">
+  <h1 class="heading-title mt-5">Now Playing</h1>
+  <div class="col-md-12 mt-5">
+    <div class="row">
+      <div class="col-md-4 mb-3" *ngFor="let currentMovie of currentMovies">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="{{ currentMovie.path }}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">{{ currentMovie.name }}</h5>
+              <a routerLink="/book-ticket" class="btn btn-secondary">Book</a>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <h1 class="heading-title mt-5">Upcoming Movies</h1>
+    <div class="col-md-12 mt-5">
+      <div class="row">
+        <div class="col-md-4 mb-3" *ngFor="let upcomingMovie of upcomingMovies">
+          <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="{{ upcomingMovie.path }}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">{{ upcomingMovie.name }}</h5>
+              </div>
+          </div>
+        </div>
+      </div>
+</div>

@@ -1,0 +1,48 @@
+<div class="col-md-12 backimage">
+  <div class="col-md-12">
+    <div class="row">
+      <div class="col-md-4 mt-5">
+        <form class="my-form" [formGroup]="movieForm" (ngSubmit)="addMovie(movieForm.value)">
+          <h3 class="form-header">Add Movie </h3>
+            <div class="form-group">
+              <label for="name">Movie Name</label>
+              <input type="name" name="name" formControlName="name"  class="form-control" id="name" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+                <label for="date">Releasing Date</label>
+                <input type="date" name="date" formControlName="date" class="form-control" id="date" placeholder="Enter date">
+            </div>
+            <div class="form-group">
+              <label for="actor">Actor</label>
+              <input type="text" name="actor" formControlName="actor" class="form-control" id="actor" placeholder="Enter actor">
+            </div>
+            <div class="form-group">
+                <button class="btn btn-info" type="submit">Add</button>
+            </div>
+          </form>
+      </div>
+      <div class="col-md-8 mt-5">
+          <table class="table table-striped table-dark">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Movie Name</th>
+                  <th scope="col">Releasing On</th>
+                  <th scope="col">Actor/Actress</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let movie of movies;let i = index">
+                  <th scope="row">{{ i+1 }}</th>
+                  <td>{{ movie.name }}</td>
+                  <td>{{ movie.date }}</td>
+                  <td>{{ movie.actor }}</td>
+                  <td><a routerLink ="/movie/{{ movie._id }}/edit" class="btn btn-info">Edit</a><button  class="btn btn-danger" (click)="deleteMovie(movie._id)">Delete</button></td>
+                </tr>
+              </tbody>
+            </table>
+      </div>
+    </div>
+  </div>  
+</div>  

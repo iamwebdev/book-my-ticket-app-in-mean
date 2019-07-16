@@ -1,0 +1,36 @@
+.backimage {
+    background-image: url('../../assets/images/cinema3.jpg');
+    background-repeat: repeat-x top;    
+    height: 600px;
+    width: 100%; /* may not be necessary */
+}
+.my-form {
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-top: 30px;
+    padding: 22px;
+}
+label {
+    color: white;
+}
+.form-header{
+    color: white;
+    text-align: center;
+    font-family: cursive;
+}
+span {
+    /* padding: 10px; */
+    color: white;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    cursor:pointer;
+}
+
+.selected-seat {
+    background-color: forestgreen;
+}
+
+.booked-seat {
+    background-color: #5d8e8e;
+    pointer-events: none;
+}

@@ -1,0 +1,31 @@
+<div *ngIf="isLoggedIn == 0; else loggedInTemplate" class="col-md-12 backimage">
+  <div class="col-md-12 d-flex justify-content-center">
+    <form class="my-form" [formGroup]="registerForm" (ngSubmit)="registerUser(registerForm.value)">
+      <h3 class="form-header">Signup </h3>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" name="name" formControlName="name" class="form-control" id="name" placeholder="Enter name">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" formControlName="email" class="form-control" id="email" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" formControlName="password" class="form-control" id="password" placeholder="Enter password">
+        </div>
+        <div class="form-group">
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" name="confirm-password" formControlName="confirm-password" class="form-control" id="confirm-password" placeholder="Enter password">
+        </div>
+        <div class="form-group">
+            <button [disabled]="!registerForm.valid" class="btn btn-info" type="submit">Register</button>
+        </div>
+      </form>
+  </div>  
+</div>
+<ng-template #loggedInTemplate>
+  <div>
+    <img class="animated" src="../../assets/images/animated5.gif" height="600" width="1200">
+  </div>
+</ng-template>

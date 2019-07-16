@@ -1,0 +1,73 @@
+.backimage {
+    background-image: url('../../assets/images/ticket.jpg');
+    background-repeat: repeat-x top;    
+    height: 600px;
+    width: 100%; /* may not be necessary */
+    margin: 0;
+    color: #ffffff;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+
+    margin: 0 auto;
+}
+
+section {
+    position: relative;
+    height: 280px;
+    width: 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+  }
+  section .left {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    float: left;
+    width: 635px;
+    padding: 35px 0 0 60px;
+  }
+  section .right {
+    float: right;
+    width: 160px;
+    padding-top: 30px;
+  }
+  section .event {
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 1.6em;
+    line-height: 35px;
+    text-transform: uppercase;
+  }
+  section .title {
+    margin-bottom: 35px;
+    color: #F5A623;
+    font-family: "Audiowide", cursive;
+    font-size: 4em;
+    line-height: 72px;
+  }
+  section .info {
+    font-size: 0.8em;
+    text-transform: uppercase;
+  }
+  section .seats {
+    margin-bottom: 35px;
+    font-size: 0.36em;
+    text-transform: uppercase;
+    text-align: right;
+  }
+  section .seats:last-child {
+    margin-bottom: 0;
+  }
+  section .seats span {
+    display: inline-block;
+    width: 80px;
+    margin-left: 15px;
+    padding: 10px 0;
+    color: #F5A623;
+    /* background: rgba(255, 255, 255, 0.5); */
+    font-family: "Kreon", serif;
+    font-size: 2.777em;
+    text-align: center;
+    vertical-align: middle;
+  }

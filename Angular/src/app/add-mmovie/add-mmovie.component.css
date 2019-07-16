@@ -1,0 +1,21 @@
+.backimage {
+    background-image: url('../../assets/images/role.jpg');
+    background-repeat: repeat-x top;    
+    height: 100%;
+    width: 100%; 
+    display: inline-block;
+    background-size: cover;
+}
+.my-form {
+    background-color: rgba(96, 76, 51, 0.72);
+    /* margin-top: 85px; */
+     padding: 55px; 
+}
+label {
+    color: white;
+}
+.form-header{
+    color: white;
+    text-align: center;
+    font-family: cursive;
+}

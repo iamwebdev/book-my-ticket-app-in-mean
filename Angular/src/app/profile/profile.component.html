@@ -1,0 +1,24 @@
+<link href="https://fonts.googleapis.com/css?family=Play" rel="stylesheet">
+<div id="top">
+    <div id="banner_wrapper">
+          <div id="banner"></div>
+            <h1 style="font-family: cursive">{{ name }}</h1>
+      </div>
+</div>
+
+<p class="mt-5" style="text-align: center;font-family: cursive;font-size:26px;">Watched Movies</p>
+<div class="col-md-12 mt-5">
+    <div class="row" *ngIf="watchedMovies.length > 0; else noMovieTemp">
+        <div class="col-md-4 mb-5" *ngFor="let watchedMovie of watchedMovies">
+          <div class="card" style="width: 18rem;">
+              <img style="width: 100%;height: 15vw;object-fit: cover;" class="card-img-top" src="{{ watchedMovie.path }}" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">{{ watchedMovie.name }}</h5>
+              </div>
+          </div>
+        </div>
+    </div>
+    <ng-template #noMovieTemp>
+        <p class="mt-5 mb-5" style="text-align: center;font-family: cursive;font-size:16px;">You have not watched any movie yet. For whom you are waiting for?? <a class="pulse" routerLink="/book-ticket">Click</a> to grab your ticket at your favourite cinema.</p>
+    </ng-template>
+</div>

@@ -1,0 +1,46 @@
+<div class="col-md-12 backimage">
+  <div class="col-md-12 d-flex justify-content-center">
+    <form [formGroup]="ticketForm" action="POST" (ngSubmit)="bookMyTicket(ticketForm.value)" class="my-form">
+        <h3 class="form-header mb-3">Book your seat</h3>
+            <div class="form-row">
+              <div class="col">
+                <select name="theatre" formControlName="theatre" id="theatre" (change)="getBookedTickets($event,'Theatre')" class="form-control">
+                  <option value="">Select Theatre</option>
+                  <option value="{{ theatre }}" *ngFor="let theatre of theatres">{{ theatre }}</option>
+                </select>
+              </div>
+              <div class="col">
+                  <select (change)="getBookedTickets($event)" id="movie" name="movie" formControlName="movie" class="form-control">
+                    <option value="">Select Movie</option>
+                    <option value="{{ movie._id }}" *ngFor="let movie of movies">{{ movie.name }}</option>
+                  </select>
+              </div>
+              <div class="col">
+                <select (change)="getBookedTickets($event)" id="timing" class="form-control" name="timing" formControlName="timing">
+                  <option value="">Select Timing</option>
+                  <option value="Morning">Morning</option>
+                  <option value="Evening">Evening</option>
+                  <option value="Night">Night</option>
+                </select>
+              </div>
+              <div class="col">
+                  <input (change)="getBookedTickets($event)" id="date" name="date" formControlName="date" type="date" class="form-control" placeholder="Select date">
+              </div>
+            </div>
+            <div class="row mt-5">    
+                <span (click)="getClickedSeat('A', number+1 ,'Gold')" class="border border-danger A{{ number+1 }}" *ngFor="let number of numbers">A{{ number+1 }}</span>
+                <br>
+                <span (click)="getClickedSeat('B', number+1, 'Silver')" class="border border-success B{{ number+1 }}" *ngFor="let number of numbers">B{{ number+1 }}</span>
+                <br>
+                <span (click)="getClickedSeat('C', number+1, 'Bronze')" class="border border-primary C{{ number+1 }}" *ngFor="let number of numbers">C{{ number+1 }}</span>
+            </div>
+            <div class="col-md-12 offset-md-9 mt-4" >
+              <span>Number of seats: {{ noOfSelectedSeats }}</span><br>
+              <span>Total Amount: {{ totalAmount }}</span>
+            </div>
+            <div class="col-md-12 mt-2  d-flex justify-content-center">
+              <button [disabled]="!ticketForm.valid" type="submit" class="btn btn-dark">Pay</button>
+            </div>
+    </form>
+  </div>
+</div>  
